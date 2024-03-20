@@ -336,6 +336,9 @@ func newRunCommand(ctx context.Context, input *Input) func(*cobra.Command, []str
 		if input.jsonLogger {
 			log.SetFormatter(&log.JSONFormatter{})
 		}
+		if input.noOutput {
+			log.SetLevel(log.ErrorLevel)
+		}
 
 		if ok, _ := cmd.Flags().GetBool("bug-report"); ok {
 			return bugReport(ctx, cmd.Version)
