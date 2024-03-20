@@ -49,6 +49,7 @@ type Input struct {
 	cacheServerAddr                    string
 	cacheServerPort                    uint16
 	jsonLogger                         bool
+	jsonListOutput                     bool
 	noSkipCheckout                     bool
 	remoteName                         string
 	replaceGheActionWithGithubCom      []string
